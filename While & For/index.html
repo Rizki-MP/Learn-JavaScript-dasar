@@ -4,7 +4,33 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>While & For</title>
   </head>
-  <body></body>
+  <body>
+    <script>
+      // juragan angkot1
+      // let jmlAngkot = 10;
+      // let noAngkot = 1;
+
+      // while (noAngkot <= jmlAngkot) {
+      //   console.log(`Angkot No.${noAngkot} Sedang Beroperasi`);
+      //   nilai++;
+      // }
+      //
+      //
+      //
+      // juragan angkot2
+      let jmlAngkot = 10;
+      let angkotBeroperasi = 6;
+      let noAngkot = 1;
+
+      while (noAngkot <= angkotBeroperasi) {
+        console.log(`Angkot No.${noAngkot} Sedang Beroperasi`);
+        nilai++;
+      }
+      for (noAngkot = angkotBeroperasi + 1; noAngkot <= jmlAngkot; noAngkot++) {
+        console.log(`Angkot No.${noAngkot} tidak beroperasi `);
+      }
+    </script>
+  </body>
 </html>
