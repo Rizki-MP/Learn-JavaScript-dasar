@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juragan Angkot</title>
+</head>
+<body>
+    <script>
+        // juragan angkot "tugas 1"
+        // var nilaiAwal = 1
+        // while (nilaiAwal <= 10) {
+        //     console.log('Angkot No. ' + nilaiAwal + ' beroperasi dengan baik')
+        //     nilaiAwal++
+        // }
+
+        console.log('===============--------------===============')
+
+        // juragan angkot 'tugas 2'
+        // let jmlAngkot = 10
+        // let angkotBeroperasi = 6
+        // let noAngkot = 1
+        // while (noAngkot <= angkotBeroperasi) {
+        //     console.log('Angkot No. ' + noAngkot + ' beroperasi dengan baik')
+        //     noAngkot++
+        // }
+
+        // for (noAngkot = angkotBeroperasi + 1;noAngkot <= jmlAngkot; noAngkot++) {
+        //     console.log('Angkot No. ' + noAngkot + ' sedang tidak beroperasi')
+        // }
+
+        console.log('===============--------------===============')
+
+        // juragan angkot 'tugas 2,3,4, 5'
+        // for, if else
+        // let jmlAngkot = 10
+        // let angkotBeroperasi = 6
+        // let noAngkot = 1
+        // for (noAngkot; noAngkot <= jmlAngkot; noAngkot++) {
+        //     if (noAngkot <= angkotBeroperasi) {
+        //         console.log('Angkot No. ' + noAngkot + ' beroperasi dengan baik')
+        //     } else if (noAngkot == 8 || noAngkot == 10) {
+        //         console.log('Angkot No. ' + noAngkot + ' sedang lembur')
+        //     } else {
+        //         console.log('Angkot No. ' + noAngkot + ' sedang tidak beroperasi')
+        //     }
+        // }
+
+        console.log('===============--------------===============')
+
+        // juragan angkot 'tugas 6'
+        // for, if, else, else if
+        // let jmlAngkot = 10
+        // let angkotBeroperasi = 6
+        // let noAngkot = 1
+        // for (noAngkot; noAngkot <= jmlAngkot; noAngkot++) {
+        //     // cara 1
+        //     // if (noAngkot == 5) {
+        //     //     console.log('Angkot No. ' + noAngkot + ' sedang lembur')
+        //     // } else if (noAngkot <= angkotBeroperasi) {
+        //     //     console.log('Angkot No. ' + noAngkot + ' beroperasi dengan baik')
+
+        //     // cara 2
+        //     if (noAngkot <= angkotBeroperasi && noAngkot != 5) {
+        //         console.log('Angkot No. ' + noAngkot + ' beroperasi dengan baik')
+        //     } else if (noAngkot == 8 || noAngkot == 10 || noAngkot == 5) {
+        //         console.log('Angkot No. ' + noAngkot + ' sedang lembur')
+        //     } else {
+        //         console.log('Angkot No. ' + noAngkot + ' sedang tidak beroperasi')
+        //     }
+        // }
+
+        console.log('===============--------------===============')
+
+        // juragan angkot "tugas 7 part 1"
+        var penumpang = [];
+        function tambahPenumpang(namaPenumpang) {
+            // jika angkot kosong
+            if (penumpang.length == 0) {
+                // tambah penumpang di awal array
+                penumpang.push(namaPenumpang);
+                // kembali isi array & keluar dari function
+                return penumpang;
+            }
+            // else 
+            else {
+                // telusuri seluruh kursi dari awal
+                for (var index in penumpang) {
+                    // jika ada kursi kosong 
+                    if ( penumpang[index] == undefined) {
+                        // tambah penumpang di kursi tersebut
+                        penumpang[index] = namaPenumpang;
+                        // kembalikan isi array & keluar dari function
+                        return penumpang;
+                    }
+                    // jika sudah ada nama yang sama
+                    else if ( penumpang[index] == namaPenumpang ) {
+                        // tampilkan pesan kesalahannya
+                        console.log('penumpang ini sdh naik!!!')
+                        // kembalikan isi array & keluar dari function
+                        return penumpang;
+                    }
+                    // jika seluruh kursi terisi 
+                    else if ( index == penumpang.length - 1) {
+                        // tambah penumpang di akhir array 
+                        penumpang.push(namaPenumpang)
+                        // kembalikan isi array & keluar dari function
+                        return penumpang;
+                    }
+                }
+            }
+        }
+
+        function hapusPenumpang(namaPenumpang) {
+            // jika penumpang kosong
+            if (penumpang.length == 0) {
+                console.log('Penumpang Masih Kosong') 
+                
+                // kembalikan
+                return penumpang;
+            } 
+            else {
+                // telusuri
+                for (let index in penumpang) {
+                    // jika nama penumpang sesuai
+                    if (penumpang[index] == namaPenumpang) {
+                        penumpang[index] = undefined;
+                        // kembalikan
+                        return penumpang;
+                    }
+                    else if (index == penumpang.length - 1) {
+                        console.log('nama penumpang tersebut blm ada di angkot')
+                        // kembalikan
+                        return penumpang;
+                    }
+                }
+            }
+        }      
+    </script>
+</body>
+</html>
